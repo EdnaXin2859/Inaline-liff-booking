@@ -10,7 +10,18 @@
         h2 { font-size: 20px; margin-bottom: 20px; text-align: center; }
         .form-group { background-color: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 15px; }
         label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; color: #555; }
-        input[type="text"], input[type="tel"], input[type="date"], input[type="time"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
+        input[type="text"], input[type="tel"], input[type="date"], input[type="time"] { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+    display: block;            /* 🔥 修正 iOS 寬度擠出去的問題 */
+    background-color: white;   /* 🔥 強制將 iOS 討厭的灰色變成白色 */
+    -webkit-appearance: none;  /* 🔥 清除 iOS 內建的預設外觀 */
+    appearance: none;
+}
         .checkbox-container { display: block; position: relative; padding-left: 35px; margin-bottom: 15px; cursor: pointer; font-size: 16px; }
         .checkbox-container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0; }
         .checkmark { position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #eee; border-radius: 5px; }
